@@ -1,10 +1,16 @@
 import {useState} from  'react';
 
 function getHeader() {
+    const [firstName, setFirstName] = useState('Sam');
     return (
-        <header>
+         <div>
+            <header>
             <h1>Welcome to React, Sam!</h1>
-        </header>
+            </header>
+       
+            <p>Hello {firstName}!</p>
+        </div>
+        
     );
 }
 

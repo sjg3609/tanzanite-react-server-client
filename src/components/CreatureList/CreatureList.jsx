@@ -5,11 +5,11 @@ import axios from 'axios';
 
 function CreatureList() {
     const [listOfCreatures, setListOfCreatures] = useState([
-        {
-            id: '0',
-            name: 'Unicorn',
-            origin: 'Norway'
-        }
+        // {
+        //     id: '0',
+        //     name: 'Unicorn',
+        //     origin: 'Norway'
+        // }
     ]);
 
     const fetchCreatureList = () => {
