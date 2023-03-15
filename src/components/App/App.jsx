@@ -5,6 +5,7 @@ import './App.css';
 // UseState updated the DOM when a variable changes
 import {useState} from 'react';
 import CreatureList from '../CreatureList/CreatureList.jsx';
+import Header from '../Header/Header.jsx'
 
 function App () {
   // Our functions and variables will go here
@@ -32,9 +33,8 @@ function App () {
   return (
     // This looks like HTML but is really JSX
     <div>
-      <header>
-        <h1>Welcome to React!</h1>
-      </header>
+      <Header/>
+
       <p>Hello {firstName}!</p>
       <p>You clicked {counter} times!</p>
       <button onClick={increaseClickCounter}>Increase</button>
