@@ -34,7 +34,7 @@ function CreatureList() {
                 {
                     listOfCreatures.map((creature) => (
                         // what we want to render
-                        <li>{creature.name} from {creature.origin}</li>
+                        <li key={creature.id}>{creature.name} from {creature.origin}</li>
                     ))
                 }
             </ul>
