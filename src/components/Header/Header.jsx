@@ -8,7 +8,7 @@ function getHeader() {
             <h1>Welcome to React, Sam!</h1>
             </header>
        
-            <p>Hello {firstName}!</p>
+            <p>Hello, {firstName}!</p>
         </div>
         
     );
