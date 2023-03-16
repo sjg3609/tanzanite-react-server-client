@@ -7,6 +7,7 @@ import {useState} from 'react';
 import CreatureList from '../CreatureList/CreatureList.jsx';
 import Header from '../Header/Header.jsx'
 import Counter from '../Counter/Counter.jsx'
+import InputExample from '../InputExample/InputExample.jsx';
 
 function App () {
   // Our functions and variables will go here
@@ -15,14 +16,14 @@ function App () {
   // let counter = 0;
 
   // const [myStateVariable, setMyVariable] = useState('initial value');
-
+  const [firstName, setFirstName] = useState('Sam');
   return (
     // This looks like HTML but is really JSX
     <div>
       <Header/>
-
+      <p>Hello, {firstName}!</p>
       <Counter/>
-
+      <InputExample />
       <CreatureList/>
      
       {/* <input type= "submit" value="Submit"/> */}

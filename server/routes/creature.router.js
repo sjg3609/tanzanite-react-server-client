@@ -15,8 +15,8 @@ router.get('/', (req, res) => {
         .catch((error) => {
             console.log(`Error making database query ${sqlText}`, error);
             res.sendStatus(500); // Good server always responds
-        })
-})
+        });
+});
 
 
 // Setup a POST route to add a new creature to the database
@@ -35,7 +35,7 @@ router.post('/', (req, res) => {
             console.log(`Error making database query ${sqlText}`, error);
             res.sendStatus(500); // Good server always responds
         })
-})
+});
 
 
 module.exports = router;
