@@ -16,14 +16,22 @@ function App () {
   // let counter = 0;
 
   // const [myStateVariable, setMyVariable] = useState('initial value');
-  const [firstName, setFirstName] = useState('Sam');
+  // const [firstName, setFirstName] = useState('Sam');
+  const [headerText, setHeaderText] = useState('Welcome to React!!!');
+
+
   return (
     // This looks like HTML but is really JSX
     <div>
-      <Header/>
-      <p>Hello, {firstName}!</p>
+      {/* headerTextProp is the name of our prop, {headerText} is the value we are assigning to the prop */}
+      <Header 
+        textColor="green" 
+        headerText={headerText}
+        someOtherThing={'Cake'}
+      />
+      {/* <p>Hello, {firstName}!</p>
       <Counter/>
-      <InputExample />
+      <InputExample /> */}
       <CreatureList/>
      
       {/* <input type= "submit" value="Submit"/> */}
