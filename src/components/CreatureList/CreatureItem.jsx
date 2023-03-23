@@ -14,6 +14,7 @@ function CreatureItem( {creature, fetchCreatureList} ) {
         })
     }
 
+    // this is much easier after creating a CreatureItem Component
     const getDecoration = () => {
         if(creature.name === 'Megatron') {
             return 'line-through';
