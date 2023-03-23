@@ -2,6 +2,7 @@ import {useState, useEffect } from 'react';
 // we must import axios in each component we want to use it
 import axios from 'axios';
 import CreatureForm from './CreatureForm.jsx';
+import CreatureItem from './CreatureItem.jsx';
 
 function CreatureList() {
     const [creatureName, setCreatureName] = useState('');
@@ -44,8 +45,11 @@ function CreatureList() {
             <ul>
                 {
                     listOfCreatures.map((creature) => (
-                        // what we want to render
-                        <li key={creature.id}>{creature.name} from {creature.origin}</li>
+                        <CreatureItem 
+                            key={creature.id}
+                            creature={creature}
+                            fetchCreatureList={fetchCreatureList}
+                        />
                     ))
                 }
             </ul>
