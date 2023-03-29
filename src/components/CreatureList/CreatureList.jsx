@@ -3,6 +3,8 @@ import {useState, useEffect } from 'react';
 import axios from 'axios';
 import CreatureForm from './CreatureForm.jsx';
 import CreatureItem from './CreatureItem.jsx';
+import Grid from '@mui/material/Grid';
+import Container from '@mui/material/Container';
 
 function CreatureList() {
     const [creatureName, setCreatureName] = useState('');
@@ -32,7 +34,7 @@ function CreatureList() {
 
     // All components return what you want them to display
     return (
-        <div>
+        <Container>
             <CreatureForm 
                 creatureName={creatureName}
                 setCreatureName={setCreatureName}
@@ -42,7 +44,7 @@ function CreatureList() {
                 />
             <h2>Creature List</h2>
             
-            <ul>
+            <Grid container spacing={2}>
                 {
                     listOfCreatures.map((creature) => (
                         <CreatureItem 
@@ -52,8 +54,8 @@ function CreatureList() {
                         />
                     ))
                 }
-            </ul>
-        </div>
+            </Grid>
+        </Container>
     );
 }
 

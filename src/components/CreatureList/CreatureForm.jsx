@@ -1,4 +1,10 @@
 import axios from 'axios';
+import Box from '@mui/material/Box';
+import TextField from '@mui/material/TextField';
+import Button from '@mui/material/Button';
+import Grid from '@mui/material/Grid';
+import Stack from '@mui/material/Stack';
+
 
 function CreatureForm( {creatureName, setCreatureName, creatureOrigin, setCreatureOrigin, fetchCreatureList} ) {
     const submitForm = (e) => {
@@ -16,15 +22,17 @@ function CreatureForm( {creatureName, setCreatureName, creatureOrigin, setCreatu
         })
     }
     return (
-        <>
-        <form onSubmit={submitForm}>
-                Name: <input type="text" value={creatureName} onChange={(e) => setCreatureName(e.target.value)} />
+        <Grid item xs={12} md={4}>
+            <Box component="form" >
+                <Stack direction="row" spacing={2}>
+                <TextField label="Name" size="large" value={creatureName} onChange={(e) => setCreatureName(e.target.value)} />
                 <br/>
-                Origin: <input type="text" value={creatureOrigin} onChange={(e) => setCreatureOrigin(e.target.value)} />
+                <TextField label="Origin" size="large" value={creatureOrigin} onChange={(e) => setCreatureOrigin(e.target.value)} />
                 <br/>
-                <input type="submit" value="Submit" />
-            </form>
-        </>
+                <Button variant="outlined" size="large" value="Submit" onClick={submitForm}>Submit</Button>
+                </Stack>
+            </Box>
+        </Grid>
     )
 }
 
