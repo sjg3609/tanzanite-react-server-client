@@ -22,12 +22,12 @@ function CreatureForm( {creatureName, setCreatureName, creatureOrigin, setCreatu
         })
     }
     return (
-        <Grid item xs={12} md={4}>
-            <Box component="form" >
+        <Grid>
+            <Box id="FormBox" component="form" >
                 <Stack direction="row" spacing={2}>
-                <TextField label="Name" size="large" value={creatureName} onChange={(e) => setCreatureName(e.target.value)} />
+                <TextField label="Name" variant="standard" size="large" value={creatureName} onChange={(e) => setCreatureName(e.target.value)} />
                 <br/>
-                <TextField label="Origin" size="large" value={creatureOrigin} onChange={(e) => setCreatureOrigin(e.target.value)} />
+                <TextField variant="standard" label="Origin" size="large" value={creatureOrigin} onChange={(e) => setCreatureOrigin(e.target.value)} />
                 <br/>
                 <Button variant="outlined" size="large" value="Submit" onClick={submitForm}>Submit</Button>
                 </Stack>
